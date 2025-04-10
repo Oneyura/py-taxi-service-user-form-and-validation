@@ -12,7 +12,7 @@ class LicenseValidationMixin:
         if len(license_number) != 8:
             raise ValidationError("license_number should be equal to 8")
         elif not (
-                license_number[:2].isalpha() and license_number[:2].isupper()
+                license_number[:3].isalpha() and license_number[:2].isupper()
         ):
             raise ValidationError(
                 "license_number should " "start with uppercase letter"
